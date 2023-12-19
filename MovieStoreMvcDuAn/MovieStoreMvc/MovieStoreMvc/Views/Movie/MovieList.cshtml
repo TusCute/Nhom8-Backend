@@ -1,0 +1,49 @@
+﻿@model MovieStoreMvc.Models.DTO.MovieListVm
+@{
+}
+<section>
+    <div class="container-fluid mt-4">
+        <h2>Danh sách phim</h2>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Tên phim</th>
+                        <th>Thể loại</th>
+                        <th>Năm phát hành</th>
+                        <th>Ảnh</th>
+                        <th>Diễn viên</th>
+                        <th>Giám đốc sản xuất</th>
+                        <th>Hành động cập nhật</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.MovieList)
+
+                    {
+                        <tr>
+                            <td>@item.Title</td>
+                            <td>@item.GenreNames</td>
+                            <td>@item.ReleaseYear</td>
+                            <td><img style="max-height: 60px; max-width: 80px" src="/Uploads/@item.MovieImage"
+                                    class="img-fluid" /></td>
+                            <td>@item.Cast</td>
+                            <td>@item.Director</td>
+                            <td>
+                                <a href="/Movie/Edit?id=@item.Id" class="btn btn-primary"><i class="fa fa-edit"></i>
+                                    Chỉnh sửa</a>
+                                <a onclick="return window.confirm('Bạn có chắc muốn xóa nội dung này chứ ?')" href="/Movie/Delete?id=@item.Id"
+                                    class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <div class="input-container mt-3">
+            <a href="/Movie/Add" class="btn btn-primary">Quay lại</a>
+        </div>
+    </div>
+</section>
