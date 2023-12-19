@@ -34,7 +34,6 @@ D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\obj\Debug\net7.0\ref\MovieStoreA
 D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\MovieStoreMvc.deps.json
 D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\MovieStoreMvc.runtimeconfig.json
 D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\bundleconfig.json
-D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\libman.json
 D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\MovieStoreMvc.staticwebassets.runtime.json
 D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\MovieStoreMvc.exe
 D:\BackEnd\DuAn\MovieStoreMvcDuAn\MovieStoreAPI\bin\Debug\net7.0\MovieStoreAPI.staticwebassets.runtime.json
