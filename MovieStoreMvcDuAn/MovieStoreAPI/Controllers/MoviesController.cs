@@ -15,6 +15,7 @@ namespace MovieStoreAPI.Controllers
     {
         private readonly MovieStoreMvcContext _context = new MovieStoreMvcContext();
 
+        // GET: api/Movies
         //public MoviesController(MovieStoreMvcContext context)
         //{
         //    _context = context;
