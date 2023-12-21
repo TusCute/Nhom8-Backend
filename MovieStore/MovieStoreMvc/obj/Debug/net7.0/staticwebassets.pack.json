@@ -1,0 +1,181 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\03352a0e-9e56-436d-aeb9-6a68bb4df5e6.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\03352a0e-9e56-436d-aeb9-6a68bb4df5e6.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\0ede5181-2995-483c-bc14-b903c95af299.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\0ede5181-2995-483c-bc14-b903c95af299.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\0f6bea9e-e3f2-4466-8430-93f4be52a313.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\0f6bea9e-e3f2-4466-8430-93f4be52a313.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\18ee0442-c3bb-48e2-8a2d-b8952bc4867f.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\18ee0442-c3bb-48e2-8a2d-b8952bc4867f.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\2dc39ad4-51df-4cb8-ae65-08f2ec29ac68.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\2dc39ad4-51df-4cb8-ae65-08f2ec29ac68.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\7112530a-0fb6-4159-ab69-6ad465e6cc5a.png",
+      "PackagePath": "staticwebassets\\Uploads\\7112530a-0fb6-4159-ab69-6ad465e6cc5a.png"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\733b8a62-5433-4d98-bcce-3087e3c792b3.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\733b8a62-5433-4d98-bcce-3087e3c792b3.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\90c5780a-1415-49b4-a6c1-ca01c401c190.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\90c5780a-1415-49b4-a6c1-ca01c401c190.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\932f269b-72e9-40f4-be6a-2764e285c0a5.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\932f269b-72e9-40f4-be6a-2764e285c0a5.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\93fedbd4-bd8d-4921-a722-40a9c6bb2c00.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\93fedbd4-bd8d-4921-a722-40a9c6bb2c00.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\9d1d7212-d923-40b0-b954-114239a53313.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\9d1d7212-d923-40b0-b954-114239a53313.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\9e183ee1-541c-40a9-84fe-d0e317e08795.png",
+      "PackagePath": "staticwebassets\\Uploads\\9e183ee1-541c-40a9-84fe-d0e317e08795.png"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\ac174d1f-b5d4-4480-9e81-51708ec43f89.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\ac174d1f-b5d4-4480-9e81-51708ec43f89.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\ccb70f86-227e-4c89-8340-a9dbf7fb4418.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\ccb70f86-227e-4c89-8340-a9dbf7fb4418.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\ce5f63db-aab1-499d-a19b-85aa27dc97fa.jpg",
+      "PackagePath": "staticwebassets\\Uploads\\ce5f63db-aab1-499d-a19b-85aa27dc97fa.jpg"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\Uploads\\e9a5f582-1cbf-4bfd-9389-4cb4fa1c15ed.png",
+      "PackagePath": "staticwebassets\\Uploads\\e9a5f582-1cbf-4bfd-9389-4cb4fa1c15ed.png"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\BackEnd\\DuAn\\MovieStoreMvcDuAn\\MovieStoreMvc\\MovieStoreMvc\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MovieStoreMvc.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.MovieStoreMvc.props",
+      "PackagePath": "build\\MovieStoreMvc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.MovieStoreMvc.props",
+      "PackagePath": "buildMultiTargeting\\MovieStoreMvc.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.MovieStoreMvc.props",
+      "PackagePath": "buildTransitive\\MovieStoreMvc.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

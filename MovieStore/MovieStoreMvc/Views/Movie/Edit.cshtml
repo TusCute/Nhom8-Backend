@@ -1,0 +1,63 @@
+﻿@model MovieStoreMvc.Models.Domain.Movie
+@{
+    Layout = "_Layout";
+}
+<form class="container w-50 mt-4" asp-action="Edit" method="post" enctype="multipart/form-data">
+    <h2 class="pb-3">Chỉnh sửa thông tin phim</h2>
+
+    <div class="form-group">
+        <label asp-for="Title">Tên Phim</label>
+        <input type="text" class="form-control" asp-for="Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImageFile">Ảnh</label>
+        <input type="file" class="form-control-file" asp-for="ImageFile">
+        <span asp-validation-for="ImageFile" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Genres">Thể Loại</label>
+        <select asp-items="Model.GenreList" class="form-control" asp-for="Genres" multiple>
+            <option value="">Chọn 1 thể loại</option>
+        </select>
+        <span asp-validation-for="Genres" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ReleaseYear">Năm Phát Hành</label>
+        <input type="text" class="form-control" asp-for="ReleaseYear">
+        <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Cast">Diễn Viên</label>
+        <input type="text" class="form-control" asp-for="Cast">
+        <span asp-validation-for="Cast" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description">Giới Thiệu</label>
+        <input type="text" class="form-control" asp-for="Description">
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Director">Giám Đốc Sản Xuất</label>
+        <input type="text" class="form-control" asp-for="Director">
+        <span asp-validation-for="Director" class="text-danger"></span>
+    </div>
+
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert alert-success mb-3">
+            @TempData["msg"]
+        </div>
+    }
+
+    <div class="form-group">
+        <button class="btn btn-primary" type="submit">Lưu</button>
+        <a class="btn btn-secondary" href="/Movie/MovieList">Xem tất cả</a>
+    </div>
+</form>

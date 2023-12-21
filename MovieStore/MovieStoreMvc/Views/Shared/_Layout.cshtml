@@ -1,0 +1,373 @@
+﻿@{
+    string username = User.Identity.Name;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="/images/movie_filter_FILL0_wght400_GRAD0_opsz48.svg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-dtA3gr9TkT5PSZKAe7lH5tOu5Q6NiiNh8PiF4J1eFpQlFl5ZO4/V9XIqW1bpbb5V" crossorigin="anonymous">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../Layout/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/style.css" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+    <link href="vendor/fontawesome-free/css/all.min.css"
+          rel="stylesheet"
+          type="text/css" />
+    <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+
+
+    <!-- Custom styles for this template-->
+    <style>
+        .sidebar-sticky {
+            background-color: #343a40; /* Màu nền dark */
+            height: 100vh; /* Chiều cao tối đa là 100% chiều cao của viewport */
+            overflow-y: auto; /* Cho phép thanh cuộn nếu nội dung quá dài */
+        }
+
+        .nav-link {
+            color: white; /* Màu chữ trắng */
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+
+
+    @if (!string.IsNullOrEmpty(username))
+    {
+
+
+
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="header__logo w-100 bg-dark text-white d-flex align-items-center justify-content-between">
+                    <a class="ml-5 sidebar-brand d-flex align-items-start justify-content-start" href="/Movie/MovieList">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-laugh-wink"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">TT ADMIN</div>
+                    </a>
+
+                    <form class="form-inline">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-light" type="button">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Thêm chức năng đăng xuất -->
+                    <div class="header__top__right__auth ml-5">
+                        <a href="/UserAuthentication/Logout" style="color: white;">
+                            <i class="fa fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <nav class="col-md-2 bg-dark text-white">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Home/Privacy">
+                                    <i class="fas fa-tachometer-alt mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Dashboard
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Movie/MovieList">
+                                    <i class="fas fa-film mr-2"></i> <!-- Thêm biểu tượng Font Awesome cho phần trước của liên kết -->
+                                    Danh Sách
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Genre/Add">
+                                    <i class="fas fa-list mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Thể Loại
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Movie/Add">
+                                    <i class="fas fa-film mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Phim
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/AccountManager/Edit">
+                                    <i class="fas fa-user-cog mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Quản Lý Tài Khoản
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/UserAuthentication/Logout">
+                                    <i class="fas fa-sign-out-alt mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Đăng Xuất
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Main content -->
+                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+                    <!-- Example content -->
+                    <div class="row">
+                        @RenderBody()
+                        <!-- Your main content goes here -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    }
+
+
+    @if (string.IsNullOrEmpty(username))
+    {
+        <div id="preloder">
+            <div class="loader"></div>
+        </div>
+
+        <!-- Humberger Begin -->
+        <div class="humberger__menu__overlay"></div>
+        <div class="humberger__menu__wrapper">
+
+            <div class="humberger__menu__widget">
+                <div class="header__top__right__language">
+                    <div>English</div>
+                    <span class="arrow_carrot-down"></span>
+                    <ul>
+                        <li><a href="#">Vietnamses</a></li>
+                        <li><a href="#">English</a></li>
+                    </ul>
+                </div>
+                <div class="header__top__right__auth">
+                    <a href="/Admin"><i class="fa fa-user"></i> Login</a>
+                </div>
+            </div>
+            <nav class="humberger__menu__nav mobile-menu">
+                <ul>
+                    <li class=""><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Privacy">Shop</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div id="mobile-menu-wrap"></div>
+
+            <div class="humberger__menu__contact">
+                <ul>
+                    <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+                    <li>Free Shipping for all Order of $99</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Humberger End -->
+        <!-- Header Section Begin -->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="header__top__right">
+
+                                <div class="header__top__right__language">
+                                    <img src="../Layout/img/language.png" alt="">
+                                    <div>English</div>
+                                    <span class="arrow_carrot-down"></span>
+                                    <ul>
+                                        <li><a href="#">Vietnamses</a></li>
+                                        <li><a href="#">English</a></li>
+                                    </ul>
+                                </div>
+                                <div class="header__top__right__auth">
+                                    <a href="/UserAuthentication/Login"><i class="fa fa-user"></i> Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="container-fluid">
+
+                            <div class="col-lg-3">
+                                <div class="header__logo w-100">
+                                    <a class="navbar-brand" href="/Home/Index">Movie Store</a>
+                                </div>
+                            </div>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="col-lg-9">
+                                <nav class="header__menu">
+                                    <ul>
+                                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/Index">Trang Chủ</a></li>
+                                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/About">Về Chúng Tôi</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+
+
+                        </div>
+
+                    </nav>
+
+                    <div class="col-lg-3">
+                        <div class="header__cart">
+                        </div>
+                    </div>
+                </div>
+                <div class="humberger__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+        </header>
+        <div>
+            @RenderBody()
+        </div>
+        <!-- Header Section End -->
+        <!-- Hero Section Begin -->
+        <footer class="footer spad">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="footer__about">
+                            <div class="footer__about__logo">
+                                <a href="./index.html"><img src="../Layout/img/logo.png" alt=""></a>
+                            </div>
+                            <ul>
+                                <li>Address: 60-49 Road 11378 New York</li>
+                                <li>Phone: +65 11.188.888</li>
+                                <li>Email: hello@colorlib.com</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                        <div class="footer__widget">
+                            <h6>Useful Links</h6>
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">About Our Shop</a></li>
+                                <li><a href="#">Secure Shopping</a></li>
+                                <li><a href="#">Delivery infomation</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Our Sitemap</a></li>
+                            </ul>
+                            <ul>
+                                <li><a href="#">Who We Are</a></li>
+                                <li><a href="#">Our Services</a></li>
+                                <li><a href="#">Projects</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li><a href="#">Innovation</a></li>
+                                <li><a href="#">Testimonials</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="footer__widget">
+                            <h6>Join Our Newsletter Now</h6>
+                            <p>Get E-mail updates about our latest shop and special offers.</p>
+                            <form action="#">
+                                <input type="text" placeholder="Enter your mail">
+                                <button type="submit" class="site-btn">Subscribe</button>
+                            </form>
+                            <div class="footer__widget__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="footer__copyright">
+                            <div class="footer__copyright__text">
+                                <p>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                </p>
+                            </div>
+                            <div class="footer__copyright__payment"><img src="../Layout/img/payment-item.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    }
+
+
+
+
+    <!-- Footer Section End -->
+    <!-- Js Plugins -->
+    <script src="../Layout/js/jquery-3.3.1.min.js"></script>
+    <script src="../Layout/js/bootstrap.min.js"></script>
+    <script src="../Layout/js/jquery.nice-select.min.js"></script>
+    <script src="../Layout/js/jquery-ui.min.js"></script>
+    <script src="../Layout/js/jquery.slicknav.js"></script>
+    <script src="../Layout/js/mixitup.min.js"></script>
+    <script src="../Layout/js/owl.carousel.min.js"></script>
+    <script src="../Layout/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+    <script src="assets/demo/chart-area-demo.js"></script>
+    <script src="assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
+    <script src="js/datatables-simple-demo.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
