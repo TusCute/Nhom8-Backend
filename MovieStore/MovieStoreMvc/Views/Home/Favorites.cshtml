@@ -1,0 +1,112 @@
+﻿@* @model List<MovieStoreMvc.Models.Domain.Movie>
+
+@{
+    ViewData["Title"] = "Favorite Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml"; // Make sure to use the common layout
+}
+    <h2 class="container text-center">Favorite Movies</h2>
+
+<div class="container">
+    @foreach (var movie in Model)
+    {
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <img src="/Uploads/@movie.MovieImage" alt="Movie Image" class="img-fluid" style="height: 200px;">
+            </div>
+            <div class="col-md-6">
+                <h3>@movie.Title</h3>
+                <p><strong>Năm:</strong> @movie.ReleaseYear</p>
+                <p><strong>Đạo Diễn:</strong> @movie.Director</p>
+                <p><strong>Diễn Viên:</strong> @movie.Cast</p>
+                <form asp-page-handler="Remove" method="post">
+                    <input type="hidden" name="ProductID" value="@movie.Title" />
+                    <input type="hidden" name="returnUrl" value="@movie.Title" />
+                    <button type="submit" class="btn btn-danger">Remove from Favorites</button>
+                </form>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="shoping__cart__btns">
+                <a href="/Home/Index" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+@* @model List<MovieStoreMvc.Models.Domain.Movie>
+@{
+    ViewData["Title"] = "Favorite Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="container text-center">Favorite Movies</h2>
+<div class="container">
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["msg"]
+        </div>
+    }
+    @foreach (var movie in Model)
+    {
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <img src="/Uploads/@movie.MovieImage" alt="Movie Image" class="img-fluid" style="height: 200px;">
+            </div>
+            <div class="col-md-6">
+                <h3>@movie.Title</h3>
+                <p><strong>Năm:</strong> @movie.ReleaseYear</p>
+                <p><strong>Đạo Diễn:</strong> @movie.Director</p>
+                <p><strong>Diễn Viên:</strong> @movie.Cast</p>
+            <form asp-page-handler="Remove" method="post">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="ProductID" value="@movie.Title" />
+                <input type="hidden" name="returnUrl" value="@movie.Title" />
+                <button type="submit" class="btn btn-danger">Remove from Favorites</button>
+            </form>
+        </div>
+    }
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="shoping__cart__btns">
+                <a href="/Home/Index" class="primary-btn cart-btn">CONTINUE SHOPPING</a>
+            </div>
+        </div>
+    </div>
+</div> *@
+
+@model List<MovieStoreMvc.Models.Domain.Movie>
+@{
+    ViewData["Title"] = "Favorite Movies";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2 class="container text-center">Favorite Movies</h2>
+<div class="container">
+    @if (TempData["msg"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["msg"]
+        </div>
+    }
+    @foreach (var movie in Model)
+    {
+        <div class="row mb-5">
+            <div class="col-md-6">
+                <img src="/Uploads/@movie.MovieImage" alt="Movie Image" class="img-fluid" style="height: 200px;">
+            </div>
+            <div class="col-md-6">
+                <h3>@movie.Title</h3>
+                <p><strong>Năm:</strong> @movie.ReleaseYear</p>
+                <p><strong>Đạo Diễn:</strong> @movie.Director</p>
+                <p><strong>Diễn Viên:</strong> @movie.Cast</p>
+                <form asp-action="RemoveFromFavorites" method="post">
+                    @Html.AntiForgeryToken()
+                    <input type="hidden" name="id" value="@movie.Id" />
+                    <button type="submit" class="btn btn-danger">Remove from Favorites</button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
