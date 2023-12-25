@@ -12,5 +12,9 @@ namespace MovieStoreMvc.Repositories.Abstract
        MovieListVm List(string term = "", bool paging = false, int currentPage = 0);
         List<int> GetGenreByMovieId(int movieId);
 
+        bool AddToFavorites(int movieId);
+        bool RemoveFromFavorites(int movieId);
+
+        List<Movie> GetFavoriteMovies();
     }
 }

@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Repositories.Abstract;
+
 
 namespace MovieStoreMvc.Controllers
 {
@@ -12,11 +15,14 @@ namespace MovieStoreMvc.Controllers
         private readonly IMovieService _movieService;
         private readonly IFileService _fileService;
         private readonly IGenreService _genService;
-        public MovieController(IGenreService genService,IMovieService MovieService, IFileService fileService)
+        private readonly DatabaseContext _context;
+        public MovieController(DatabaseContext context, IGenreService genService,IMovieService MovieService, IFileService fileService)
         {
             _movieService = MovieService;
             _fileService = fileService;
             _genService = genService;
+           
+            _context = context;
         }
         public IActionResult Add()
         {
@@ -107,6 +113,29 @@ namespace MovieStoreMvc.Controllers
             var result = _movieService.Delete(id);
             return RedirectToAction(nameof(MovieList));
         }
+
+        public IActionResult Favorites()
+        {
+            // Lấy danh sách các bộ phim yêu thích từ service hoặc database
+            var favoriteMovies = _movieService.GetFavoriteMovies();
+            return View(favoriteMovies);
+        }
+
+
+        [HttpPost]
+        public IActionResult AddToFavorites(int id)
+        {
+            var result = _movieService.AddToFavorites(id);
+            return RedirectToAction("Favorites");
+        }
+
+        [HttpPost]
+        public IActionResult RemoveFromFavorites(int id)
+        {
+            var result = _movieService.RemoveFromFavorites(id);
+            return RedirectToAction("Favorites");
+        }
+
 
     }
 }

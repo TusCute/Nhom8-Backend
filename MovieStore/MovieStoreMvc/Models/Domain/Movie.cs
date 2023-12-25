@@ -32,5 +32,8 @@ namespace MovieStoreMvc.Models.Domain
         [NotMapped]
         public MultiSelectList ? MultiGenreList { get; set; }
 
+        public int FavoritesCount { get; set; }
+
+        public bool IsFavorite { get; set; }
     }
 }

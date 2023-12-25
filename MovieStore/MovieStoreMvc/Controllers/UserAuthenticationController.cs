@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Models.DTO;
 using MovieStoreMvc.Repositories.Abstract;
 
@@ -7,9 +9,17 @@ namespace MovieStoreMvc.Controllers
     public class UserAuthenticationController : Controller
     {
         private IUserAuthenticationService authService;
-        public UserAuthenticationController(IUserAuthenticationService authService)
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly SignInManager<ApplicationUser> signInManager;
+        private readonly RoleManager<IdentityRole> roleManager;
+        public UserAuthenticationController(UserManager<ApplicationUser> userManager,
+        SignInManager<ApplicationUser> signInManager,
+        RoleManager<IdentityRole> roleManager, IUserAuthenticationService authService)
         {
             this.authService = authService;
+            this.userManager = userManager;
+            this.signInManager = signInManager;
+            this.roleManager = roleManager;
         }
 
 
@@ -24,16 +34,28 @@ namespace MovieStoreMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                var result = await authService.RegisterAsync(model);
+                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, Name = model.Name };
 
-                if (result.StatusCode == 1)
+                var result = await userManager.CreateAsync(user, model.Password);
+
+                if (result.Succeeded)
                 {
-                    TempData["msg"] = result.Message;
-                    return RedirectToAction("Login");
+                    // Nếu người dùng đã chọn vai trò là "Admin", thêm người dùng vào vai trò "Admin"
+                    if (model.Role == "Admin")
+                    {
+                        await userManager.AddToRoleAsync(user, "Admin");
+                    }
+
+                    // Đăng nhập người dùng sau khi đăng ký
+                    await signInManager.SignInAsync(user, isPersistent: false);
+
+                    // Chuyển hướng đến trang chính
+                    return RedirectToAction("Index", "Home");
                 }
-                else
+
+                foreach (var error in result.Errors)
                 {
-                    TempData["error"] = result.Message;
+                    ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
 

@@ -1,4 +1,5 @@
-﻿using MovieStoreMvc.Models.Domain;
+﻿using Microsoft.EntityFrameworkCore;
+using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Models.DTO;
 using MovieStoreMvc.Repositories.Abstract;
 
@@ -140,6 +141,38 @@ namespace MovieStoreMvc.Repositories.Implementation
             var genreIds = ctx.MovieGenre.Where(a => a.MovieId == movieId).Select(a => a.GenreId).ToList();
             return genreIds;
         }
-       
+
+        public bool AddToFavorites(int movieId)
+        {
+            var movie = ctx.Movie.Find(movieId);
+            if (movie != null)
+            {
+                movie.FavoritesCount++;
+                movie.IsFavorite = true;
+                ctx.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool RemoveFromFavorites(int movieId)
+        {
+            var movie = ctx.Movie.Find(movieId);
+            if (movie != null && movie.FavoritesCount > 0)
+            {
+                movie.FavoritesCount--;
+                movie.IsFavorite = false;
+                ctx.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public List<Movie> GetFavoriteMovies()
+        {
+            // Lấy danh sách các bộ phim yêu thích từ database
+            return ctx.Movie.Where(m => m.IsFavorite).ToList();
+        }
+
     }
 }

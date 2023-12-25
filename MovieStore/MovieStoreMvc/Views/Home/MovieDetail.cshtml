@@ -32,6 +32,20 @@
 
                         </li> 
                     </ul>-->
+                    <div>
+                        @if (Model.IsFavorite)
+                        {
+                            <form asp-action="RemoveFromFavorites" asp-route-id="@Model.Id" method="post">
+                                <button type="submit">Remove from Favorites</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <form asp-action="AddToFavorites" asp-route-id="@Model.Id" method="post">
+                                <button type="submit">Add to Favorites</button>
+                            </form>
+                        }
+                    </div>
                     <div class="card-body">
                         <a href="/Home/Index" class="btn btn-primary">Back</a>
                     </div>

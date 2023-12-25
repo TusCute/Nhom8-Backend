@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Repositories.Abstract;
 using MovieStoreMvc.Repositories.Implementation;
+using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,13 +17,17 @@ builder.Services.AddScoped<IMovieService, MovieService>();
 
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("conn")));
 
-// For Identity  
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<DatabaseContext>()
-    .AddDefaultTokenProviders();
+// Configure Identity
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = false;
+})
+.AddRoles<IdentityRole>() // Thêm vai trò vào Identity
+.AddEntityFrameworkStores<DatabaseContext>();
 
-//builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/UserAuthentication/Login");
 
+
+//builder.Services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
 var app = builder.Build();
 
@@ -29,7 +35,6 @@ var app = builder.Build();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
@@ -38,12 +43,24 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+//app.MapControllerRoute(
+//   name: "default",
+//   pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+
+    // Add this route for the MovieController
+    endpoints.MapControllerRoute(
+        name: "movieRoute",
+        pattern: "{controller=Movie}/{action=AddToFavorites}/{id?}");
+});
 
 
 app.Run();
