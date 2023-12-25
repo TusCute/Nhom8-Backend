@@ -130,11 +130,27 @@ namespace MovieStoreMvc.Controllers
         }
 
         [HttpPost]
+        // public IActionResult RemoveFromFavorites(int id)
+        // {
+        //     var result = _movieService.RemoveFromFavorites(id);
+        //     return RedirectToAction("Favorites");
+        // }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult RemoveFromFavorites(int id)
         {
             var result = _movieService.RemoveFromFavorites(id);
+            if (result)
+            {
+                TempData["msg"] = "Removed from Favorites Successfully";
+            }
+            else
+            {
+                TempData["msg"] = "Error removing from Favorites";
+            }
             return RedirectToAction("Favorites");
         }
+
 
 
     }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Models.DTO;
 using MovieStoreMvc.Repositories.Abstract;
@@ -155,9 +156,12 @@ namespace MovieStoreMvc.Repositories.Implementation
             return false;
         }
 
-        public bool RemoveFromFavorites(int movieId)
+         public bool RemoveFromFavorites(int movieId)
+    {
+        try
         {
             var movie = ctx.Movie.Find(movieId);
+
             if (movie != null && movie.FavoritesCount > 0)
             {
                 movie.FavoritesCount--;
@@ -165,8 +169,28 @@ namespace MovieStoreMvc.Repositories.Implementation
                 ctx.SaveChanges();
                 return true;
             }
+
             return false;
         }
+        catch (Exception ex)
+        {
+            // Ghi log lỗi hoặc xử lý lỗi tùy thuộc vào nhu cầu
+            return false;
+        }
+     }
+//     public bool RemoveFromFavorites(int movieId)
+// {
+//     var movie = ctx.Movie.Find(movieId);
+//     if (movie != null && movie.FavoritesCount > 0)
+//     {
+//         movie.FavoritesCount--;
+//         movie.IsFavorite = false;
+//         ctx.SaveChanges();
+//         return true;
+//     }
+//     return false;
+// }
+
 
         public List<Movie> GetFavoriteMovies()
         {

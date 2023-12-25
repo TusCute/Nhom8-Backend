@@ -12245,19 +12245,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nguye\\.nuget\\packages\\": {}
+    "C:\\Users\\Shin Tai\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreAPI\\MovieStoreAPI.csproj",
+      "projectUniqueName": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreAPI\\MovieStoreAPI.csproj",
       "projectName": "MovieStoreAPI",
-      "projectPath": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreAPI\\MovieStoreAPI.csproj",
-      "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-      "outputPath": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreAPI\\obj\\",
+      "projectPath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreAPI\\MovieStoreAPI.csproj",
+      "packagesPath": "C:\\Users\\Shin Tai\\.nuget\\packages\\",
+      "outputPath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shin Tai\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12271,8 +12271,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj": {
-              "projectPath": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj"
+            "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj": {
+              "projectPath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj"
             }
           }
         }
@@ -12337,7 +12337,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
       }
     }
   }

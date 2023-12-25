@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj": {}
+    "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj": {}
   },
   "projects": {
-    "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj": {
+    "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj",
+        "projectUniqueName": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj",
         "projectName": "MovieStoreMvc",
-        "projectPath": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj",
-        "packagesPath": "C:\\Users\\nguye\\.nuget\\packages\\",
-        "outputPath": "D:\\2023_BE\\BE-THU\\Test\\DA\\Test5\\MovieStore (2)\\MovieStore\\MovieStoreMvc\\obj\\",
+        "projectPath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj",
+        "packagesPath": "C:\\Users\\Shin Tai\\.nuget\\packages\\",
+        "outputPath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nguye\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Shin Tai\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -74,6 +74,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -82,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.404\\RuntimeIdentifierGraph.json"
         }
       }
     }
