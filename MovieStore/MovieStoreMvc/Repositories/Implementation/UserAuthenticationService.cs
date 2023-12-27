@@ -27,9 +27,10 @@ namespace MovieStoreMvc.Repositories.Implementation
             if (userExists != null)
             {
                 status.StatusCode = 0;
-                status.Message = "User already exist";
+                status.Message = "User already exists";
                 return status;
             }
+
             ApplicationUser user = new ApplicationUser()
             {
                 Email = model.Email,
@@ -39,6 +40,7 @@ namespace MovieStoreMvc.Repositories.Implementation
                 EmailConfirmed = true,
                 PhoneNumberConfirmed = true,
             };
+
             var result = await userManager.CreateAsync(user, model.Password);
             if (!result.Succeeded)
             {
@@ -47,19 +49,59 @@ namespace MovieStoreMvc.Repositories.Implementation
                 return status;
             }
 
-            if (!await roleManager.RoleExistsAsync(model.Role))
-                await roleManager.CreateAsync(new IdentityRole(model.Role));
+            if (!await roleManager.RoleExistsAsync(model.Role.ToString()))
+                await roleManager.CreateAsync(new IdentityRole(model.Role.ToString()));
 
-
-            if (await roleManager.RoleExistsAsync(model.Role))
+            if (await roleManager.RoleExistsAsync(model.Role.ToString()))
             {
-                await userManager.AddToRoleAsync(user, model.Role);
+                await userManager.AddToRoleAsync(user, model.Role.ToString());
             }
 
             status.StatusCode = 1;
             status.Message = "You have registered successfully";
             return status;
         }
+ 
+        //public async Task<Status> RegisterAsync(RegistrationModel model)
+        //{
+        //    var status = new Status();
+        //    var userExists = await userManager.FindByNameAsync(model.Username);
+        //    if (userExists != null)
+        //    {
+        //        status.StatusCode = 0;
+        //        status.Message = "User already exist";
+        //        return status;
+        //    }
+        //    ApplicationUser user = new ApplicationUser()
+        //    {
+        //        Email = model.Email,
+        //        SecurityStamp = Guid.NewGuid().ToString(),
+        //        UserName = model.Username,
+        //        Name = model.Name,
+        //        EmailConfirmed = true,
+        //        PhoneNumberConfirmed = true,
+        //    };
+        //    var result = await userManager.CreateAsync(user, model.Password);
+        //    if (!result.Succeeded)
+        //    {
+        //        status.StatusCode = 0;
+        //        status.Message = "User creation failed";
+        //        return status;
+        //    }
+
+        //    if (!await roleManager.RoleExistsAsync(model.Role))
+        //        await roleManager.CreateAsync(new IdentityRole(model.Role));
+
+
+        //    if (await roleManager.RoleExistsAsync(model.Role))
+        //    {
+        //        await userManager.AddToRoleAsync(user, model.Role);
+        //    }
+
+        //    status.StatusCode = 1;
+        //    status.Message = "You have registered successfully";
+        //    return status;
+        //}
 
 
         public async Task<Status> LoginAsync(LoginModel model)

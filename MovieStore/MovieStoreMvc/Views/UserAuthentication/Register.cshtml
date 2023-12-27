@@ -1,4 +1,5 @@
-﻿@model MovieStoreMvc.Models.DTO.RegistrationModel
+﻿@using static MovieStoreMvc.Models.DTO.RegistrationModel;
+@model MovieStoreMvc.Models.DTO.RegistrationModel
 
 
 <form asp-controller="UserAuthentication" asp-action="Register" method="post" class="container w-50 mt-4">
@@ -35,13 +36,20 @@
         <input asp-for="PasswordConfirm" type="password" class="form-control" />
         <span asp-validation-for="PasswordConfirm" class="text-danger"></span>
     </div>
-
     <div class="mb-3">
+        <label asp-for="Role" class="form-label">Select Role</label>
+        <select asp-for="Role" asp-items="Html.GetEnumSelectList<RoleEnum>()" class="form-control">
+            <option value="">-- Select Role --</option>
+        </select>
+        <span asp-validation-for="Role" class="text-danger"></span>
+    </div>
+   @*  <div class="mb-3">
         <label asp-for="Role" class="form-label"></label>
         <input asp-for="Role" class="form-control" />
         <span asp-validation-for="Role" class="text-danger"></span>
-    </div>
+    </div> *@
 
+    <a class="btn btn-primary" href="/UserAuthentication/Register">Login</a>
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
 

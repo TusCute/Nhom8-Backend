@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RIIeDTc29zVxDpg0m5NFWCmHA94MTqY2YSIm6riDH450LIn2qKoZBWs8VHJ8UWT4iHCP9g6mQlCyY3UCvAY1uw==",
+  "dgSpecHash": "eHGfKhPrwHURGc4T5p1tRuOwL6J4W1lVbaZZbzdqa/grdm9dE18hmHsadJa0Vfgqfcn5kNwjnku3GdrT/blyxA==",
   "success": true,
-  "projectFilePath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\moi 1\\MovieStore\\MovieStoreAPI\\MovieStoreAPI.csproj",
+  "projectFilePath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\moi tai\\MovieStore\\MovieStoreAPI\\MovieStoreAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shin Tai\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Shin Tai\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

@@ -69,7 +69,7 @@ namespace MovieStoreMvc.Repositories.Implementation
         {
             var data = new MovieListVm();
            
-             var list = ctx.Movie.ToList();
+            var list = ctx.Movie.ToList();
            
            
             if (!string.IsNullOrEmpty(term))

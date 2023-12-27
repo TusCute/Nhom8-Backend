@@ -1,20 +1,21 @@
 ﻿@model MovieStoreMvc.Models.Domain.Movie
-@{
-    Layout = "_Admin";
-}
 
-<d class="container mt-5">
+
+<div class="container mt-5">
     <form class="row g-3" asp-action="Edit" method="post" enctype="multipart/form-data">
-        <h2 class="pb-4 text-center">Update Movie</h2>
+        <h2 class="pb-4 text-center">Cập Nhật Phim</h2>
+
         <input type="hidden" asp-for="Id">
         <input type="hidden" asp-for="MovieImage">
 
         <div class="col-md-12">
-            <label for="Genres" class="form-label">Thể loại</label>
-            <select asp-items="Model.MultiGenreList" class="form-control" id="Genres" name="Genres" asp-for="Genres" multiple>
-                <option value="">--select--</option>
-            </select>
-            <span asp-validation-for="Genres" class="text-danger"></span>
+            <label for="Genres" class="form-label">Thể Loại</label>
+            <div class="input-group">
+                <select asp-items="Model.MultiGenreList" class="form-control" id="Genres" name="Genres" asp-for="Genres" multiple>
+                    <option value="">-- Chọn --</option>
+                </select>
+                <span asp-validation-for="Genres" class="input-group-text text-danger"></span>
+            </div>
         </div>
 
         <div class="col-md-12">
@@ -62,6 +63,7 @@
 
         <div class="col-md-12 text-center">
             <button class="btn btn-primary" type="submit">Save</button>
-            <a class="btn btn-secondary" href="/Movie/MovieList">All recor</a>
+            <a class="btn btn-secondary" href="/Movie/MovieList">All records</a>
         </div>
     </form>
+</div>

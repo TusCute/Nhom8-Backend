@@ -1,23 +1,21 @@
 ﻿@model MovieStoreMvc.Models.DTO.MovieListVm
-@{
-    Layout = "_Admin";
-}
+
 <section>
     <div class="container-fluid mt-4">
-        <h2>Danh sách phim</h2>
+        <h2>Danh Sách Phim</h2>
 
         <div class="table-responsive">
             <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>Tên phim</th>
-                        <th>Thể loại</th>
-                        <th>Năm phát hành</th>
+                        <th>Tên Phim</th>
+                        <th>Thể Loại</th>
+                        <th>Năm Phát Hành</th>
                         <th>Ảnh</th>
-                        <th>Diễn viên</th>
+                        <th>Diễn Viên</th>
                         <th>Giới Thiệu</th>
-                        <th>Giám đốc sản xuất</th>
-                        <th>Hành động cập nhật</th>
+                        <th>Quốc Gia</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,7 +33,7 @@
                             <td>@item.Director</td>
                             <td>
                                 <a href="/Movie/Edit?id=@item.Id" class="btn btn-primary"><i class="fa fa-edit"></i>
-                                    Chỉnh sửa</a>
+                                    Chỉnh Sửa</a>
                                 <a onclick="return window.confirm('Bạn có chắc muốn xóa nội dung này chứ ?')" href="/Movie/Delete?id=@item.Id"
                                     class="btn btn-danger"><i class="fa fa-trash"></i> Xóa</a>
                             </td>
@@ -46,7 +44,10 @@
         </div>
 
         <div class="input-container mt-3">
-            <a href="/Movie/Add" class="btn btn-primary">Quay lại</a>
+            <a href="/Movie/Add" class="btn btn-success">Thêm Mới Phim</a>
+        </div>
+        <div class="input-container mt-3">
+            <a href="/Movie/Add" class="btn btn-primary">Quay Lại</a>
         </div>
     </div>
 </section>

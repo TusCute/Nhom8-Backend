@@ -1,10 +1,8 @@
 ﻿@model MovieStoreMvc.Models.Domain.Movie
-@{
-    Layout = "_Admin";
-}
+
 
 <form class="container w-50 mt-4" asp-action="Add" method="post" enctype="multipart/form-data">
-    <h2 class="pb-3">Tạo nội dung</h2>
+    <h2 class="pb-3">Tạo Nội Dung</h2>
 
     <div class="form-group">
         <label asp-for="Title">Tên Phim</label>
@@ -13,17 +11,18 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="ImageFile">Ảnh</label>
+        <label asp-for="ImageFile">Image</label>
         <input type="file" class="form-control-file" asp-for="ImageFile">
         <span asp-validation-for="ImageFile" class="text-danger"></span>
     </div>
 
+
     <div class="form-group">
         <label asp-for="Genres">Thể Loại</label>
         <select asp-items="Model.GenreList" class="form-control" asp-for="Genres" multiple>
-            <option value="">Chọn 1 thể loại</option>
+            <option value="">Chọn một thể loại</option>
         </select>
-        <span asp-validation-for="Genres" class="text-danger"></span>
+        <span asp-validation-for="Genres" class="text-danger mt-2 d-block"></span>
     </div>
 
     <div class="form-group">
@@ -45,7 +44,7 @@
     </div>
 
     <div class="form-group">
-        <label asp-for="Director">Giám Đốc Sản Xuất</label>
+        <label asp-for="Director">Quốc Gia</label>
         <input type="text" class="form-control" asp-for="Director">
         <span asp-validation-for="Director" class="text-danger"></span>
     </div>
@@ -59,6 +58,6 @@
 
     <div class="form-group">
         <button class="btn btn-primary" type="submit">Lưu</button>
-        <a class="btn btn-secondary" href="/Movie/MovieList">Xem tất cả</a>
+        <a class="btn btn-secondary" href="/Movie/MovieList">Xem Tất Cả</a>
     </div>
 </form>
