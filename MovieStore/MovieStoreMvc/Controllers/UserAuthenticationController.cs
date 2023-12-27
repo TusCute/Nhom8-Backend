@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Models.DTO;
 using MovieStoreMvc.Repositories.Abstract;
 
@@ -7,11 +9,13 @@ namespace MovieStoreMvc.Controllers
     public class UserAuthenticationController : Controller
     {
         private IUserAuthenticationService authService;
-        public UserAuthenticationController(IUserAuthenticationService authService)
+        private readonly UserManager<ApplicationUser> userManager;  // Inject UserManager<ApplicationUser>
+
+        public UserAuthenticationController(IUserAuthenticationService authService, UserManager<ApplicationUser> userManager)
         {
             this.authService = authService;
+            this.userManager = userManager;
         }
-
 
         [HttpGet]
         public IActionResult Register()
@@ -37,34 +41,8 @@ namespace MovieStoreMvc.Controllers
                 }
             }
 
-            // If ModelState is not valid, return back to the registration page with validation errors
             return View(model);
         }
-
-
-        /* We will create a user with admin rights, after that we are going
-          to comment this method because we need only
-          one user in this application 
-          If you need other users ,you can implement this registration method with view
-          I have create a complete tutorial for this, you can check the link in description box
-         */
-
-        //public async Task<IActionResult> Register()
-        //{
-        //    var model = new RegistrationModel
-        //    {
-        //        Email = "admin@gmail.com",
-        //        Username = "admin",
-        //        Name = "Ravindra",
-        //        Password = "Admin@123",
-        //        PasswordConfirm = "Admin@123",
-        //        Role = "Admin"
-        //    };
-        //    // if you want to register with user , Change Role="User"
-        //    var result = await authService.RegisterAsync(model);
-        //    return Ok(result.Message);
-        //}
-
 
         public async Task<IActionResult> Login()
         {
@@ -79,10 +57,32 @@ namespace MovieStoreMvc.Controllers
 
             var result = await authService.LoginAsync(model);
             if (result.StatusCode == 1)
-                return RedirectToAction("MovieList", "Movie");
+            {
+                var user = await userManager.FindByNameAsync(model.Username);
+
+                if (user != null)
+                {
+                    var userRoles = await userManager.GetRolesAsync(user);
+
+                    if (userRoles.Contains("Admin"))
+                    {
+                        return RedirectToAction("MovieList", "Movie");
+                    }
+                    else
+                    {
+                        TempData["msg"] = "You do not have permission to access this page.";
+                        return RedirectToAction("Index", "Home");
+                    }
+                }
+                else
+                {
+                    TempData["msg"] = "User not found.";
+                    return RedirectToAction(nameof(Login));
+                }
+            }
             else
             {
-                TempData["msg"] = "Could not logged in..";
+                TempData["msg"] = "Could not log in.";
                 return RedirectToAction(nameof(Login));
             }
         }
@@ -92,6 +92,5 @@ namespace MovieStoreMvc.Controllers
             await authService.LogoutAsync();
             return RedirectToAction(nameof(Login));
         }
-
     }
 }

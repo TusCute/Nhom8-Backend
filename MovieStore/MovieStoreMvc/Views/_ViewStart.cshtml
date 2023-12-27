@@ -1,3 +1,12 @@
 ﻿@{
+    string userName = User.Identity.Name;
+}
+
+@if (!string.IsNullOrEmpty(userName) && User.IsInRole("Admin"))
+{
+    Layout = "_LayoutAdmin";
+}
+else
+{
     Layout = "_Layout";
 }

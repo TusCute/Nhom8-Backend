@@ -158,8 +158,8 @@ namespace MovieStoreMvc.Repositories.Implementation
 
          public bool RemoveFromFavorites(int movieId)
     {
-        try
-        {
+            try
+            {
             var movie = ctx.Movie.Find(movieId);
 
             if (movie != null && movie.FavoritesCount > 0)
@@ -173,7 +173,7 @@ namespace MovieStoreMvc.Repositories.Implementation
             return false;
         }
         catch (Exception ex)
-        {
+            {
             // Ghi log lỗi hoặc xử lý lỗi tùy thuộc vào nhu cầu
             return false;
         }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Models.DTO;
 using MovieStoreMvc.Repositories.Abstract;
@@ -18,6 +19,13 @@ namespace MovieStoreMvc.Repositories.Implementation
             this.roleManager = roleManager;
             this.signInManager = signInManager;
 
+        }
+
+        // Trong UserAuthenticationService
+        public async Task<List<ApplicationUser>> GetAllUsersAsync()
+        {
+            // Lấy danh sách tất cả người dùng từ UserManager
+            return await userManager.Users.ToListAsync();
         }
 
         public async Task<Status> RegisterAsync(RegistrationModel model)
@@ -61,47 +69,7 @@ namespace MovieStoreMvc.Repositories.Implementation
             status.Message = "You have registered successfully";
             return status;
         }
- 
-        //public async Task<Status> RegisterAsync(RegistrationModel model)
-        //{
-        //    var status = new Status();
-        //    var userExists = await userManager.FindByNameAsync(model.Username);
-        //    if (userExists != null)
-        //    {
-        //        status.StatusCode = 0;
-        //        status.Message = "User already exist";
-        //        return status;
-        //    }
-        //    ApplicationUser user = new ApplicationUser()
-        //    {
-        //        Email = model.Email,
-        //        SecurityStamp = Guid.NewGuid().ToString(),
-        //        UserName = model.Username,
-        //        Name = model.Name,
-        //        EmailConfirmed = true,
-        //        PhoneNumberConfirmed = true,
-        //    };
-        //    var result = await userManager.CreateAsync(user, model.Password);
-        //    if (!result.Succeeded)
-        //    {
-        //        status.StatusCode = 0;
-        //        status.Message = "User creation failed";
-        //        return status;
-        //    }
 
-        //    if (!await roleManager.RoleExistsAsync(model.Role))
-        //        await roleManager.CreateAsync(new IdentityRole(model.Role));
-
-
-        //    if (await roleManager.RoleExistsAsync(model.Role))
-        //    {
-        //        await userManager.AddToRoleAsync(user, model.Role);
-        //    }
-
-        //    status.StatusCode = 1;
-        //    status.Message = "You have registered successfully";
-        //    return status;
-        //}
 
 
         public async Task<Status> LoginAsync(LoginModel model)
@@ -157,31 +125,5 @@ namespace MovieStoreMvc.Repositories.Implementation
             await signInManager.SignOutAsync();
 
         }
-
-        //public async Task<Status> ChangePasswordAsync(ChangePasswordModel model, string username)
-        //{
-        //    var status = new Status();
-
-        //    var user = await userManager.FindByNameAsync(username);
-        //    if (user == null)
-        //    {
-        //        status.Message = "User does not exist";
-        //        status.StatusCode = 0;
-        //        return status;
-        //    }
-        //    var result = await userManager.ChangePasswordAsync(user, model.CurrentPassword, model.NewPassword);
-        //    if (result.Succeeded)
-        //    {
-        //        status.Message = "Password has updated successfully";
-        //        status.StatusCode = 1;
-        //    }
-        //    else
-        //    {
-        //        status.Message = "Some error occcured";
-        //        status.StatusCode = 0;
-        //    }
-        //    return status;
-
-        //}
     }
 }
