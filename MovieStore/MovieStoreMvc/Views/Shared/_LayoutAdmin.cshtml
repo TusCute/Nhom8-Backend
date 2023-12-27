@@ -1,0 +1,142 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using MovieStoreMvc.Models.Domain;
+@inject UserManager<ApplicationUser> UserManager
+
+@{
+    string userName = User.Identity.Name;
+    ApplicationUser user = null;
+    string userDisplayName = string.Empty;
+
+    if (!string.IsNullOrEmpty(userName))
+    {
+        user = await UserManager.FindByNameAsync(userName);
+        userDisplayName = user != null ? user.Name : userName;
+    }
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Head content for the admin interface -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Store - Admin</title>
+
+    <!-- Include your CSS stylesheets here -->
+    <link rel="stylesheet" href="../Layout/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../Layout/css/font-awesome.min.css" type="text/css">
+    <!-- Add other CSS links as needed -->
+    <!-- Custom styles for this template-->
+    <style>
+        .sidebar-sticky {
+            background-color: #343a40;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .nav-link {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    @if (!string.IsNullOrEmpty(userName) && User.IsInRole("Admin"))
+    {
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Header -->
+                <header class="header__logo w-100 bg-dark text-white d-flex align-items-center justify-content-between">
+                    <a class="ml-5 sidebar-brand d-flex align-items-start justify-content-start" href="/Movie/MovieList">
+                        <div class="sidebar-brand-icon rotate-n-15">
+                            <i class="fas fa-laugh-wink"></i>
+                        </div>
+                        <div class="sidebar-brand-text mx-3">TTT ADMIN</div>
+                    </a>
+
+                    <form class="form-inline">
+                        <span class="dropdown">Xin chào <strong style="color: #FF5733;">Xin chào @userDisplayName</strong> đã quay trở lại</span>
+                    </form>
+
+                    <!-- Logout Button -->
+                    <div class="header__top__right__auth mr-5">
+                        <a href="/UserAuthentication/Logout" class="btn btn-outline-light">
+                            <i class="bi bi-box-arrow-right"></i> LOGOUT
+                        </a>
+                    </div>
+
+                </header>
+
+                <!-- Sidebar -->
+                <nav class="col-md-2 bg-dark text-white">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Home/Index">
+                                    <i class="bi bi-speedometer2 mr-2"></i>
+                                    Quay về trang chủ   
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Movie/MovieList">
+                                    <i class="bi bi-film mr-2"></i>
+                                    Danh Sách Phim
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Review/ReviewList">
+                                    <i class="bi bi-film mr-2"></i> <!-- Thêm biểu tượng Font Awesome cho phần trước của liên kết -->
+                                    Danh Sách Review
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Genre/Add">
+                                    <i class="bi bi-film mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Thể Loại
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Movie/Add">
+                                    <i class="bi bi-film mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Phim
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Review/Add">
+                                    <i class="bi bi-film mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Tin Tức
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Accounting/ListAccount">
+                                    <i class="bi bi-person mr-2"></i> <!-- Biểu tượng Font Awesome -->
+                                    Quản Lý Tài Khoản
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- Main content -->
+                <main role="main" class="col-md-10">
+                    <!-- Example content -->
+                    <div class="row">
+                        @RenderBody()
+                        <!-- Your main content goes here -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    }
+
+    <!-- Include your JavaScript files here -->
+    <script src="../Layout/js/jquery-3.3.1.min.js"></script>
+    <script src="../Layout/js/bootstrap.min.js"></script>
+    <!-- Add other script links as needed -->
+</body>
+
+</html>
