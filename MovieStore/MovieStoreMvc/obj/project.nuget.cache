@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6kaV/uzoL4HKL9PZXvItClId+yBSTh3dvWFvjk5/YxBJKbcLg5eo4hTi8cIRHF0hHNCJ/f/rcefQvdVD7sZtcA==",
+  "dgSpecHash": "JTaa/tkHGb5yw3adfJb8zXpe3nv1XysBMA7RlQKmi5ncuYmyXrNkI0urLeCowbgElZcMYBTryc4+ZCRkkeGZ/Q==",
   "success": true,
-  "projectFilePath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj",
+  "projectFilePath": "A:\\BACK-END\\Duan\\Lam do an\\moi nhat\\moi 1\\MovieStore\\MovieStoreMvc\\MovieStoreMvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Shin Tai\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Shin Tai\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

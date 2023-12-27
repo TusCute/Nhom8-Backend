@@ -69,7 +69,7 @@ namespace MovieStoreMvc.Repositories.Implementation
         {
             var data = new MovieListVm();
            
-            var list = ctx.Movie.ToList();
+             var list = ctx.Movie.ToList();
            
            
             if (!string.IsNullOrEmpty(term))
@@ -197,6 +197,8 @@ namespace MovieStoreMvc.Repositories.Implementation
             // Lấy danh sách các bộ phim yêu thích từ database
             return ctx.Movie.Where(m => m.IsFavorite).ToList();
         }
+
+        
 
     }
 }

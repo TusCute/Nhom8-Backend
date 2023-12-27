@@ -1,16 +1,21 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using MovieStoreMvc.Models.Domain;
 using MovieStoreMvc.Repositories.Abstract;
-
 namespace MovieStoreMvc.Controllers
 {
     
     public class HomeController : Controller
     {
         private readonly IMovieService _movieService;
-        public HomeController(IMovieService movieService)
+        private readonly IReviewService _reviewService;
+        private readonly DatabaseContext ctx;
+        public HomeController(IMovieService movieService, IReviewService reviewService, DatabaseContext dbContext)
         {
+            ctx = dbContext;
             _movieService = movieService;
+            _reviewService = reviewService;
         }
         public IActionResult Index(string term="", int currentPage = 1)
         {
@@ -31,8 +36,16 @@ namespace MovieStoreMvc.Controllers
         public IActionResult MovieDetail(int movieId)
         {
             var movie = _movieService.GetById(movieId);
+           
             return View(movie);
         }
+
+        public IActionResult ReviewDetail(string term = "", int currentPage = 1)
+        {
+            var movies = _reviewService.List(term, true, currentPage);
+            return View(movies);
+        }
+        
 
         [HttpPost]
         public IActionResult AddToFavorites(int id)
@@ -71,6 +84,7 @@ namespace MovieStoreMvc.Controllers
             return RedirectToAction("MovieDetail", new { movieId = id });
         }
 
-
-    }
+        
+        
+        }
 }

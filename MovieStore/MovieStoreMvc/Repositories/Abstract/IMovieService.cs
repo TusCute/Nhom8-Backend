@@ -16,5 +16,6 @@ namespace MovieStoreMvc.Repositories.Abstract
         bool RemoveFromFavorites(int movieId);
 
         List<Movie> GetFavoriteMovies();
+
     }
 }

@@ -17,7 +17,6 @@ namespace MovieStoreMvc.Models.Domain
         public DbSet<Movie> Movie { get; set; }
 
         // Cập nhật DatabaseContext trong Models/Domain/DatabaseContext.cs
-        
-
+        public DbSet<Review> Review { get; set; }
     }
 }

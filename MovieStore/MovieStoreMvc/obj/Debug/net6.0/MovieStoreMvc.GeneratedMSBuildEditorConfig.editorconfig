@@ -9,85 +9,109 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MovieStoreMvc
 build_property.RootNamespace = MovieStoreMvc
-build_property.ProjectDir = A:\BACK-END\Duan\Lam do an\moi nhat\MovieStore\MovieStoreMvc\
+build_property.ProjectDir = A:\BACK-END\Duan\Lam do an\moi nhat\moi 1\MovieStore\MovieStoreMvc\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = A:\BACK-END\Duan\Lam do an\moi nhat\MovieStore\MovieStoreMvc
+build_property.MSBuildProjectDirectory = A:\BACK-END\Duan\Lam do an\moi nhat\moi 1\MovieStore\MovieStoreMvc
 build_property._RazorSourceGeneratorDebug = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Genre/Add.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Genre/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Genre/Edit.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Genre/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Genre/GenreList.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Genre/GenreList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcR2VucmVcR2VucmVMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Home/About.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Home/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Home/Favorites.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Home/Favorites.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXZvcml0ZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Home/Index.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Home/MovieDetail.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Home/MovieDetail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNb3ZpZURldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Home/Privacy.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Movie/Add.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Home/ReviewDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZXZpZXdEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Movie/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcQWRkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Movie/Edit.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Movie/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Movie/MovieList.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Movie/MovieList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aWVcTW92aWVMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Shared/Error.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Review/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Review/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Review/ReviewList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmV2aWV3XFJldmlld0xpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Shared/_Admin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9BZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Shared/_RatingPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9SYXRpbmdQYXJ0aWFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/UserAuthentication/AccountManagement.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/UserAuthentication/AccountManagement.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXEFjY291bnRNYW5hZ2VtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/UserAuthentication/Login.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/UserAuthentication/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/UserAuthentication/Register.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/UserAuthentication/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckF1dGhlbnRpY2F0aW9uXFJlZ2lzdGVyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/_ViewImports.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/_ViewStart.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[A:/BACK-END/Duan/Lam do an/moi nhat/MovieStore/MovieStoreMvc/Views/Shared/_Layout.cshtml]
+[A:/BACK-END/Duan/Lam do an/moi nhat/moi 1/MovieStore/MovieStoreMvc/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-1zco90cu9m

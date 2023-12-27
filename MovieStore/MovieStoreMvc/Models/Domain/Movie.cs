@@ -35,5 +35,6 @@ namespace MovieStoreMvc.Models.Domain
         public int FavoritesCount { get; set; }
 
         public bool IsFavorite { get; set; }
+
     }
 }

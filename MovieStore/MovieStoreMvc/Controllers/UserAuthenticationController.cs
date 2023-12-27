@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using MovieStoreMvc.Models.Domain;
+﻿using Microsoft.AspNetCore.Mvc;
 using MovieStoreMvc.Models.DTO;
 using MovieStoreMvc.Repositories.Abstract;
 
@@ -9,17 +7,9 @@ namespace MovieStoreMvc.Controllers
     public class UserAuthenticationController : Controller
     {
         private IUserAuthenticationService authService;
-        private readonly UserManager<ApplicationUser> userManager;
-        private readonly SignInManager<ApplicationUser> signInManager;
-        private readonly RoleManager<IdentityRole> roleManager;
-        public UserAuthenticationController(UserManager<ApplicationUser> userManager,
-        SignInManager<ApplicationUser> signInManager,
-        RoleManager<IdentityRole> roleManager, IUserAuthenticationService authService)
+        public UserAuthenticationController(IUserAuthenticationService authService)
         {
             this.authService = authService;
-            this.userManager = userManager;
-            this.signInManager = signInManager;
-            this.roleManager = roleManager;
         }
 
 
@@ -34,28 +24,16 @@ namespace MovieStoreMvc.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.Username, Email = model.Email, Name = model.Name };
+                var result = await authService.RegisterAsync(model);
 
-                var result = await userManager.CreateAsync(user, model.Password);
-
-                if (result.Succeeded)
+                if (result.StatusCode == 1)
                 {
-                    // Nếu người dùng đã chọn vai trò là "Admin", thêm người dùng vào vai trò "Admin"
-                    if (model.Role == "Admin")
-                    {
-                        await userManager.AddToRoleAsync(user, "Admin");
-                    }
-
-                    // Đăng nhập người dùng sau khi đăng ký
-                    await signInManager.SignInAsync(user, isPersistent: false);
-
-                    // Chuyển hướng đến trang chính
-                    return RedirectToAction("Index", "Home");
+                    TempData["msg"] = result.Message;
+                    return RedirectToAction("Login");
                 }
-
-                foreach (var error in result.Errors)
+                else
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
+                    TempData["error"] = result.Message;
                 }
             }
 
@@ -111,7 +89,7 @@ namespace MovieStoreMvc.Controllers
 
         public async Task<IActionResult> Logout()
         {
-           await authService.LogoutAsync();
+            await authService.LogoutAsync();
             return RedirectToAction(nameof(Login));
         }
 

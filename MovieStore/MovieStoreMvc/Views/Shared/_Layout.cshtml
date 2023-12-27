@@ -63,93 +63,6 @@
 
 <body>
 
-    @if (!string.IsNullOrEmpty(username))
-    {
-        <div class="container-fluid">
-            <div class="row">
-                <div class="header__logo w-100 bg-dark text-white d-flex align-items-center justify-content-between">
-                    <a class="ml-5 sidebar-brand d-flex align-items-start justify-content-start" href="/Movie/MovieList">
-                        <div class="sidebar-brand-icon rotate-n-15">
-                            <i class="fas fa-laugh-wink"></i>
-                        </div>
-                        <div class="sidebar-brand-text mx-3">TTT ADMIN</div>
-                    </a>
-
-                    <form class="form-inline">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-light" type="button">
-                                    <i class="fas fa-search"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <!-- Thêm chức năng đăng xuất -->
-                    <div class="header__top__right__auth ml-5">
-                        <a href="/UserAuthentication/Logout" style="color: white;">
-                            <i class="fa fa-sign-out-alt"></i> Logout
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Sidebar -->
-                <nav class="col-md-2 bg-dark text-white">
-                    <div class="sidebar-sticky">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Home/Privacy">
-                                    <i class="fas fa-tachometer-alt mr-2"></i> <!-- Biểu tượng Font Awesome -->
-                                    Dashboard
-                                </a>
-                            </li>
-
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Movie/MovieList">
-                                    <i class="fas fa-film mr-2"></i> <!-- Thêm biểu tượng Font Awesome cho phần trước của liên kết -->
-                                    Danh Sách
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Genre/Add">
-                                    <i class="fas fa-list mr-2"></i> <!-- Biểu tượng Font Awesome -->
-                                    Thể Loại
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/Movie/Add">
-                                    <i class="fas fa-film mr-2"></i> <!-- Biểu tượng Font Awesome -->
-                                    Phim
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/AccountManager/Edit">
-                                    <i class="fas fa-user-cog mr-2"></i> <!-- Biểu tượng Font Awesome -->
-                                    Quản Lý Tài Khoản
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/UserAuthentication/Logout">
-                                    <i class="fas fa-sign-out-alt mr-2"></i> <!-- Biểu tượng Font Awesome -->
-                                    Đăng Xuất
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-
-                <!-- Main content -->
-                <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-                    <!-- Example content -->
-                    <div class="row">
-                        @RenderBody()
-                        <!-- Your main content goes here -->
-                    </div>
-                </main>
-            </div>
-        </div>
-    }
 
 
     @if (string.IsNullOrEmpty(username))
@@ -238,6 +151,7 @@
                                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/Index">Trang Chủ</a></li>
                                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/About">Về Chúng Tôi</a></li>
                                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/Favorites">Yêu Thích</a></li>
+                                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/Home/ReviewDetail">Review</a></li>
                                     </ul>
                                 </nav>
                             </div>
