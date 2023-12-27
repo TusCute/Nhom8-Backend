@@ -1,0 +1,64 @@
+﻿@model MovieStoreMvc.Models.Domain.Review
+
+<d class="container mt-5">
+    <form class="row g-3" asp-action="Edit" method="post" enctype="multipart/form-data">
+        <h2 class="pb-4 text-center">Cập Nhật Tin Tức</h2>
+        <input type="hidden" asp-for="Id">
+        <input type="hidden" asp-for="ReviewImage">
+
+        <div class="col-md-12">
+            <label for="Genres" class="form-label">Thể Loại</label>
+            <select asp-items="Model.MultiGenreList" class="form-control" id="Genres" name="Genres" asp-for="Genres" multiple>
+                <option value="">--select--</option>
+            </select>
+            <span asp-validation-for="Genres" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="Title" class="form-label">Tiêu Đề</label>
+            <input type="text" class="form-control" asp-for="Title">
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="ImageFile" class="form-label">Image</label>
+            <input type="file" class="form-control" asp-for="ImageFile">
+            <span asp-validation-for="ImageFile" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="ReleaseYear" class="form-label">Ngày Đăng</label>
+            <input type="text" class="form-control" asp-for="ReleaseYear">
+            <span asp-validation-for="ReleaseYear" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="Cast" class="form-label">Diễn Viên</label>
+            <input type="text" class="form-control" asp-for="Cast">
+            <span asp-validation-for="Cast" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="Description" class="form-label">Tin Tức</label>
+            <input type="text" class="form-control" asp-for="Description">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="Director" class="form-label">Quốc Gia</label>
+            <input type="text" class="form-control" asp-for="Director">
+            <span asp-validation-for="Director" class="text-danger"></span>
+        </div>
+
+        @if (TempData["msg"] != null)
+        {
+            <div class="alert alert-success mb-3 col-md-12">
+                @TempData["msg"]
+            </div>
+        }
+
+        <div class="col-md-12 text-center">
+            <button class="btn btn-primary" type="submit">Lưu</button>
+            <a class="btn btn-secondary" href="/Review/ReviewList">Xem Tất Cả</a>
+        </div>
+    </form>

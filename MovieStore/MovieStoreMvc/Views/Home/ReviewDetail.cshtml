@@ -1,0 +1,169 @@
+﻿@model MovieStoreMvc.Models.DTO.MovieListVm
+@{
+    Layout = "_Layout";
+}
+<style>
+    /* Các style hiện tại của bạn ở đây... */
+    .animated-button {
+        color: #fff; /* Màu chữ ban đầu */
+        background-color: #6c757d; /* Màu nền ban đầu */
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        .animated-button:hover {
+            color: #000; /* Màu chữ khi hover */
+            background-color: #000; /* Màu nền khi hover */
+        }
+
+    .movie-card {
+        transition: transform 0.3s;
+    }
+
+        .movie-card:hover {
+            transform: scale(1.05);
+        }
+
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .pagination ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    .pagination li {
+        margin: 0 5px;
+    }
+
+    .pagination a {
+        display: block;
+        padding: 10px 15px;
+        color: #007bff;
+        background-color: #fff;
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+        .pagination a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+    .pagination .active a {
+        background-color: #007bff;
+        color: #fff;
+    }
+
+</style>
+
+<section class="container mt-3">
+    <div class="row">
+        <!-- Phần sản phẩm (bên trái) -->
+        <div class="col-md-7">
+            <div class="row row-cols-1 g-4">
+                <p class="text-center">Các Bộ Phim Hay</p>
+                @foreach (var movie in Model.ReviewList)
+                {
+                    <div class="col mb-3">
+                        <div class="card movie-card d-flex">
+                            <div class="d-flex">
+                                <img src="/Uploads/@movie.ReviewImage" class="card-img-left" alt="Movie Image" style="width: 200px; height: 250px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">@movie.Title</h5>
+                                    <p class="card-text">Tin Tức: @movie.Description</p>
+                                    <p class="card-text">Ngày Đăng: @movie.ReleaseYear</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+        <!-- Phần tin tức (bên phải) -->
+        <div class="col-md-5">
+            <div class="row row-cols-1 g-4">
+                <p class="text-center">Bài Đăng Nổi Bật</p>
+                <div class="col mb-3">
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Aquaman 2 nhận kỷ lục cà chua thối, fan DC bức xúc</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Sao phim "Friends" qua đời ở tuổi 54</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Aquaman 2 với điềm gở từ Amber Heard và kết cục buồn cho DCEU</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Lùm xùm Amber Heard và điềm báo thất bại</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Aquaman 2 - kết cục buồn cho một thập kỷ DCEU</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Aquaman 2 đứng đầu tất cả phòng vé nhưng vẫn lỗ</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Chuột - từ tranh đến phim</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="card movie-card">
+                            <div class="card-body">
+                                <h5 class="card-title">Tin Tức</h5>
+                                <p class="card-text">Mang tiếng phim Giáng sinh, Wonka bỗng 'hụt hơi' trong dịp lễ này</p>
+                                <!--Thêm thông tin tin tức khác nếu cần-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
