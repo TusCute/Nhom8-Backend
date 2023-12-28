@@ -83,7 +83,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2 class="container text-center">Favorite Movies</h2>
-<div class="container">
+<div class="container mt-5">
     @if (TempData["msg"] != null)
     {
         <div class="alert alert-success">
@@ -104,7 +104,7 @@
                 <form asp-action="RemoveFromFavorites" method="post">
                     @Html.AntiForgeryToken()
                     <input type="hidden" name="id" value="@movie.Id" />
-                    <button type="submit" class="btn btn-danger">Remove from Favorites</button>
+                    <button type="submit" class="btn btn-danger">Remove From Favorites</button>
                 </form>
             </div>
         </div>

@@ -17,5 +17,7 @@ public partial class Movie
 
     public string Description { get; set; } = null!;
 
+    public string? Video { get; set; }
+
     public string Director { get; set; } = null!;
 }

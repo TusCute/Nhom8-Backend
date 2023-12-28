@@ -21,7 +21,7 @@ namespace MovieStoreMvc.Models.DTO
         public RoleEnum Role { get; set; }
         public enum RoleEnum
         {
-            //Admin,
+            Admin,
             Guest
         }
     }

@@ -19,7 +19,7 @@
         </div>
 
         <div class="col-md-12">
-            <label asp-for="Title" class="form-label">Title</label>
+            <label asp-for="Title" class="form-label">Tên Phim</label>
             <input type="text" class="form-control" asp-for="Title">
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
@@ -31,25 +31,31 @@
         </div>
 
         <div class="col-md-12">
-            <label asp-for="ReleaseYear" class="form-label">Released Year</label>
+            <label asp-for="ReleaseYear" class="form-label">Năm Phát Hành</label>
             <input type="text" class="form-control" asp-for="ReleaseYear">
             <span asp-validation-for="ReleaseYear" class="text-danger"></span>
         </div>
 
         <div class="col-md-12">
-            <label asp-for="Cast" class="form-label">Cast</label>
+            <label asp-for="Cast" class="form-label">Diễn Viên</label>
             <input type="text" class="form-control" asp-for="Cast">
             <span asp-validation-for="Cast" class="text-danger"></span>
         </div>
 
         <div class="col-md-12">
-            <label asp-for="Description" class="form-label">Description</label>
+            <label asp-for="Description" class="form-label">Giới Thiệu</label>
             <input type="text" class="form-control" asp-for="Description">
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
 
         <div class="col-md-12">
-            <label asp-for="Director" class="form-label">Director</label>
+            <label asp-for="Video" class="form-label">Mã Video Trailer</label>
+            <input type="text" class="form-control" asp-for="Video">
+            <span asp-validation-for="Video" class="text-danger"></span>
+        </div>
+
+        <div class="col-md-12">
+            <label asp-for="Director" class="form-label">Quốc Gia</label>
             <input type="text" class="form-control" asp-for="Director">
             <span asp-validation-for="Director" class="text-danger"></span>
         </div>
@@ -61,9 +67,9 @@
             </div>
         }
 
-        <div class="col-md-12 text-center">
+        <div class="col-md-12 text-center mt-3">
             <button class="btn btn-primary" type="submit">Save</button>
-            <a class="btn btn-secondary" href="/Movie/MovieList">All records</a>
+            <a class="btn btn-secondary" href="/Movie/MovieList">All Records</a>
         </div>
     </form>
 </div>

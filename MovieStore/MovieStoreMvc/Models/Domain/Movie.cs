@@ -17,6 +17,8 @@ namespace MovieStoreMvc.Models.Domain
         [Required]
         public string? Description { get; set; }
         [Required]
+        public string? Video { get; set; }
+        [Required]
         public string? Director { get; set; }
 
         [NotMapped]

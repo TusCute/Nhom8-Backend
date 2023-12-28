@@ -44,6 +44,12 @@
     </div>
 
     <div class="form-group">
+        <label asp-for="Video">Mã Video Trailer</label>
+        <input type="text" class="form-control" asp-for="Video">
+        <span asp-validation-for="Video" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
         <label asp-for="Director">Quốc Gia</label>
         <input type="text" class="form-control" asp-for="Director">
         <span asp-validation-for="Director" class="text-danger"></span>
@@ -56,7 +62,7 @@
         </div>
     }
 
-    <div class="form-group">
+    <div class="form-group mt-3">
         <button class="btn btn-primary" type="submit">Lưu</button>
         <a class="btn btn-secondary" href="/Movie/MovieList">Xem Tất Cả</a>
     </div>
